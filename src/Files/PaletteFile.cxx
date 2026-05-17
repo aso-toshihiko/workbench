@@ -1708,6 +1708,123 @@ PaletteFile::addDefaultPalettes()
     
     if (modifiedStatus == false) {
         this->clearModified();//this clears modified status on all members, to match our status
+
+        //----------------------------------------------------------------------
+        // ASO_DIVERGING palette
+        // Cyan-Blue-Black-Gold-Yellow diverging colormap
+        //
+        if (this->getPaletteByName("ASO_DIVERGING") == NULL) {
+            Palette asoDiverging;
+            asoDiverging.setName("ASO_DIVERGING");
+        
+            // Color definitions (sampled from 256-entry colormap)
+            this->addColor("_aso_div_00",  25, 252, 255);
+            this->addColor("_aso_div_01",   5, 239, 255);
+            this->addColor("_aso_div_02",   0, 223, 255);
+            this->addColor("_aso_div_03",   0, 208, 255);
+            this->addColor("_aso_div_04",   0, 192, 255);
+            this->addColor("_aso_div_05",   0, 177, 255);
+            this->addColor("_aso_div_06",   0, 162, 255);
+            this->addColor("_aso_div_07",   0, 147, 255);
+            this->addColor("_aso_div_08",   0, 131, 255);
+            this->addColor("_aso_div_09",   0, 116, 255);
+            this->addColor("_aso_div_10",   0, 101, 255);
+            this->addColor("_aso_div_11",   0,  86, 255);
+            this->addColor("_aso_div_12",   0,  70, 254);
+            this->addColor("_aso_div_13",   0,  60, 244);
+            this->addColor("_aso_div_14",   0,  55, 224);
+            this->addColor("_aso_div_15",   0,  50, 203);
+            this->addColor("_aso_div_16",   0,  45, 183);
+            this->addColor("_aso_div_17",   0,  40, 163);
+            this->addColor("_aso_div_18",   0,  34, 142);
+            this->addColor("_aso_div_19",   0,  29, 122);
+            this->addColor("_aso_div_20",   0,  24, 102);
+            this->addColor("_aso_div_21",   0,  19,  82);
+            this->addColor("_aso_div_22",   0,  14,  61);
+            this->addColor("_aso_div_23",   0,   9,  40);
+            this->addColor("_aso_div_24",   0,   4,  19);
+            this->addColor("_aso_div_25",   1,   0,   3);
+            this->addColor("_aso_div_26",  10,   6,   0);
+            this->addColor("_aso_div_27",  25,  16,   0);
+            this->addColor("_aso_div_28",  41,  27,   0);
+            this->addColor("_aso_div_29",  56,  37,   0);
+            this->addColor("_aso_div_30",  71,  47,   0);
+            this->addColor("_aso_div_31",  86,  57,   0);
+            this->addColor("_aso_div_32", 101,  67,   0);
+            this->addColor("_aso_div_33", 117,  77,   0);
+            this->addColor("_aso_div_34", 133,  88,   0);
+            this->addColor("_aso_div_35", 148,  98,   0);
+            this->addColor("_aso_div_36", 163, 108,   0);
+            this->addColor("_aso_div_37", 178, 118,   0);
+            this->addColor("_aso_div_38", 191, 129,   0);
+            this->addColor("_aso_div_39", 197, 139,   0);
+            this->addColor("_aso_div_40", 202, 149,   0);
+            this->addColor("_aso_div_41", 207, 159,   0);
+            this->addColor("_aso_div_42", 212, 169,   0);
+            this->addColor("_aso_div_43", 217, 180,   0);
+            this->addColor("_aso_div_44", 222, 190,   0);
+            this->addColor("_aso_div_45", 227, 200,   0);
+            this->addColor("_aso_div_46", 232, 210,   0);
+            this->addColor("_aso_div_47", 237, 220,   0);
+            this->addColor("_aso_div_48", 242, 230,   2);
+            this->addColor("_aso_div_49", 248, 241,  18);
+            this->addColor("_aso_div_50", 253, 251,  33);
+        
+            // Scalar to color mapping
+            asoDiverging.addScalarAndColor(-1.0000f, "_aso_div_00");
+            asoDiverging.addScalarAndColor(-0.9688f, "_aso_div_01");
+            asoDiverging.addScalarAndColor(-0.9375f, "_aso_div_02");
+            asoDiverging.addScalarAndColor(-0.9062f, "_aso_div_03");
+            asoDiverging.addScalarAndColor(-0.8750f, "_aso_div_04");
+            asoDiverging.addScalarAndColor(-0.8438f, "_aso_div_05");
+            asoDiverging.addScalarAndColor(-0.8125f, "_aso_div_06");
+            asoDiverging.addScalarAndColor(-0.7812f, "_aso_div_07");
+            asoDiverging.addScalarAndColor(-0.7500f, "_aso_div_08");
+            asoDiverging.addScalarAndColor(-0.7188f, "_aso_div_09");
+            asoDiverging.addScalarAndColor(-0.6875f, "_aso_div_10");
+            asoDiverging.addScalarAndColor(-0.6562f, "_aso_div_11");
+            asoDiverging.addScalarAndColor(-0.6250f, "_aso_div_12");
+            asoDiverging.addScalarAndColor(-0.5938f, "_aso_div_13");
+            asoDiverging.addScalarAndColor(-0.5625f, "_aso_div_14");
+            asoDiverging.addScalarAndColor(-0.5312f, "_aso_div_15");
+            asoDiverging.addScalarAndColor(-0.5000f, "_aso_div_16");
+            asoDiverging.addScalarAndColor(-0.4688f, "_aso_div_17");
+            asoDiverging.addScalarAndColor(-0.4375f, "_aso_div_18");
+            asoDiverging.addScalarAndColor(-0.4062f, "_aso_div_19");
+            asoDiverging.addScalarAndColor(-0.3750f, "_aso_div_20");
+            asoDiverging.addScalarAndColor(-0.3438f, "_aso_div_21");
+            asoDiverging.addScalarAndColor(-0.3125f, "_aso_div_22");
+            asoDiverging.addScalarAndColor(-0.2812f, "_aso_div_23");
+            asoDiverging.addScalarAndColor(-0.2500f, "_aso_div_24");
+            asoDiverging.addScalarAndColor(-0.2188f, "_aso_div_25");
+            asoDiverging.addScalarAndColor(-0.1875f, "_aso_div_26");
+            asoDiverging.addScalarAndColor(-0.1562f, "_aso_div_27");
+            asoDiverging.addScalarAndColor(-0.1250f, "_aso_div_28");
+            asoDiverging.addScalarAndColor(-0.0938f, "_aso_div_29");
+            asoDiverging.addScalarAndColor(-0.0625f, "_aso_div_30");
+            asoDiverging.addScalarAndColor(-0.0312f, "_aso_div_31");
+            asoDiverging.addScalarAndColor( 0.0000f, "_aso_div_32");
+            asoDiverging.addScalarAndColor( 0.0312f, "_aso_div_33");
+            asoDiverging.addScalarAndColor( 0.0625f, "_aso_div_34");
+            asoDiverging.addScalarAndColor( 0.0938f, "_aso_div_35");
+            asoDiverging.addScalarAndColor( 0.1250f, "_aso_div_36");
+            asoDiverging.addScalarAndColor( 0.1562f, "_aso_div_37");
+            asoDiverging.addScalarAndColor( 0.1875f, "_aso_div_38");
+            asoDiverging.addScalarAndColor( 0.2188f, "_aso_div_39");
+            asoDiverging.addScalarAndColor( 0.2500f, "_aso_div_40");
+            asoDiverging.addScalarAndColor( 0.2812f, "_aso_div_41");
+            asoDiverging.addScalarAndColor( 0.3125f, "_aso_div_42");
+            asoDiverging.addScalarAndColor( 0.3438f, "_aso_div_43");
+            asoDiverging.addScalarAndColor( 0.3750f, "_aso_div_44");
+            asoDiverging.addScalarAndColor( 0.4062f, "_aso_div_45");
+            asoDiverging.addScalarAndColor( 0.4375f, "_aso_div_46");
+            asoDiverging.addScalarAndColor( 0.4688f, "_aso_div_47");
+            asoDiverging.addScalarAndColor( 0.5000f, "_aso_div_48");
+            asoDiverging.addScalarAndColor( 0.5312f, "_aso_div_49");
+            asoDiverging.addScalarAndColor( 0.5625f, "_aso_div_50");
+        
+            addPalette(asoDiverging);
+        }
     }
     
     static bool printAllPalettesFlag = false;
