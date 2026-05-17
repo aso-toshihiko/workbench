@@ -1331,6 +1331,126 @@ PaletteFile::addDefaultPalettes()
         addPalette(psychNoNone);
     }
     
+
+    //----------------------------------------------------------------------
+    // aso-div palette
+    // Cyan-Black-Gold diverging colormap
+    // Negative = cyan, zero = black, positive = gold/yellow
+    //
+    if (this->getPaletteByName("aso-div") == NULL) {
+        Palette asoDiverging;
+        asoDiverging.setName("aso-div");
+
+        // 51 entries sampled from 200-row cyangold LUT
+        // i=0: cyan (scalar=-1.0), i=25: near-black (scalar=0.0), i=50: gold (scalar=+1.0)
+        this->addColor("_aso_div_00",  26, 253, 255);
+        this->addColor("_aso_div_01",   5, 239, 255);
+        this->addColor("_aso_div_02",   0, 224, 255);
+        this->addColor("_aso_div_03",   0, 208, 255);
+        this->addColor("_aso_div_04",   0, 193, 255);
+        this->addColor("_aso_div_05",   0, 178, 255);
+        this->addColor("_aso_div_06",   0, 163, 255);
+        this->addColor("_aso_div_07",   0, 148, 255);
+        this->addColor("_aso_div_08",   0, 132, 255);
+        this->addColor("_aso_div_09",   0, 117, 255);
+        this->addColor("_aso_div_10",   0, 102, 255);
+        this->addColor("_aso_div_11",   0,  86, 255);
+        this->addColor("_aso_div_12",   0,  71, 255);
+        this->addColor("_aso_div_13",   0,  60, 245);
+        this->addColor("_aso_div_14",   0,  55, 225);
+        this->addColor("_aso_div_15",   0,  50, 204);
+        this->addColor("_aso_div_16",   0,  45, 184);
+        this->addColor("_aso_div_17",   0,  40, 163);
+        this->addColor("_aso_div_18",   0,  35, 142);
+        this->addColor("_aso_div_19",   0,  30, 122);
+        this->addColor("_aso_div_20",   0,  25, 102);
+        this->addColor("_aso_div_21",   0,  20,  82);
+        this->addColor("_aso_div_22",   0,  15,  62);
+        this->addColor("_aso_div_23",   0,  10,  40);
+        this->addColor("_aso_div_24",   0,   5,  20);
+        this->addColor("_aso_div_25",   1,   0,   3);
+        this->addColor("_aso_div_26",   7,   4,   0);
+        this->addColor("_aso_div_27",  21,  14,   0);
+        this->addColor("_aso_div_28",  37,  25,   0);
+        this->addColor("_aso_div_29",  53,  35,   0);
+        this->addColor("_aso_div_30",  68,  45,   0);
+        this->addColor("_aso_div_31",  83,  55,   0);
+        this->addColor("_aso_div_32",  98,  65,   0);
+        this->addColor("_aso_div_33", 113,  75,   0);
+        this->addColor("_aso_div_34", 129,  86,   0);
+        this->addColor("_aso_div_35", 144,  96,   0);
+        this->addColor("_aso_div_36", 160, 106,   0);
+        this->addColor("_aso_div_37", 175, 116,   0);
+        this->addColor("_aso_div_38", 189, 126,   0);
+        this->addColor("_aso_div_39", 196, 137,   0);
+        this->addColor("_aso_div_40", 201, 147,   0);
+        this->addColor("_aso_div_41", 206, 157,   0);
+        this->addColor("_aso_div_42", 211, 167,   0);
+        this->addColor("_aso_div_43", 216, 178,   0);
+        this->addColor("_aso_div_44", 221, 188,   0);
+        this->addColor("_aso_div_45", 226, 198,   0);
+        this->addColor("_aso_div_46", 231, 208,   0);
+        this->addColor("_aso_div_47", 237, 218,   0);
+        this->addColor("_aso_div_48", 242, 228,   0);
+        this->addColor("_aso_div_49", 247, 239,  15);
+        this->addColor("_aso_div_50", 252, 249,  30);
+
+        // Descending scalar mapping: +1.0 (gold) to -1.0 (cyan), step=0.04
+        asoDiverging.addScalarAndColor(  1.0000f, "_aso_div_50");
+        asoDiverging.addScalarAndColor(  0.9600f, "_aso_div_49");
+        asoDiverging.addScalarAndColor(  0.9200f, "_aso_div_48");
+        asoDiverging.addScalarAndColor(  0.8800f, "_aso_div_47");
+        asoDiverging.addScalarAndColor(  0.8400f, "_aso_div_46");
+        asoDiverging.addScalarAndColor(  0.8000f, "_aso_div_45");
+        asoDiverging.addScalarAndColor(  0.7600f, "_aso_div_44");
+        asoDiverging.addScalarAndColor(  0.7200f, "_aso_div_43");
+        asoDiverging.addScalarAndColor(  0.6800f, "_aso_div_42");
+        asoDiverging.addScalarAndColor(  0.6400f, "_aso_div_41");
+        asoDiverging.addScalarAndColor(  0.6000f, "_aso_div_40");
+        asoDiverging.addScalarAndColor(  0.5600f, "_aso_div_39");
+        asoDiverging.addScalarAndColor(  0.5200f, "_aso_div_38");
+        asoDiverging.addScalarAndColor(  0.4800f, "_aso_div_37");
+        asoDiverging.addScalarAndColor(  0.4400f, "_aso_div_36");
+        asoDiverging.addScalarAndColor(  0.4000f, "_aso_div_35");
+        asoDiverging.addScalarAndColor(  0.3600f, "_aso_div_34");
+        asoDiverging.addScalarAndColor(  0.3200f, "_aso_div_33");
+        asoDiverging.addScalarAndColor(  0.2800f, "_aso_div_32");
+        asoDiverging.addScalarAndColor(  0.2400f, "_aso_div_31");
+        asoDiverging.addScalarAndColor(  0.2000f, "_aso_div_30");
+        asoDiverging.addScalarAndColor(  0.1600f, "_aso_div_29");
+        asoDiverging.addScalarAndColor(  0.1200f, "_aso_div_28");
+        asoDiverging.addScalarAndColor(  0.0800f, "_aso_div_27");
+        asoDiverging.addScalarAndColor(  0.0400f, "_aso_div_26");
+        asoDiverging.addScalarAndColor(  0.0000f, "_aso_div_25");
+        asoDiverging.addScalarAndColor( -0.0400f, "_aso_div_24");
+        asoDiverging.addScalarAndColor( -0.0800f, "_aso_div_23");
+        asoDiverging.addScalarAndColor( -0.1200f, "_aso_div_22");
+        asoDiverging.addScalarAndColor( -0.1600f, "_aso_div_21");
+        asoDiverging.addScalarAndColor( -0.2000f, "_aso_div_20");
+        asoDiverging.addScalarAndColor( -0.2400f, "_aso_div_19");
+        asoDiverging.addScalarAndColor( -0.2800f, "_aso_div_18");
+        asoDiverging.addScalarAndColor( -0.3200f, "_aso_div_17");
+        asoDiverging.addScalarAndColor( -0.3600f, "_aso_div_16");
+        asoDiverging.addScalarAndColor( -0.4000f, "_aso_div_15");
+        asoDiverging.addScalarAndColor( -0.4400f, "_aso_div_14");
+        asoDiverging.addScalarAndColor( -0.4800f, "_aso_div_13");
+        asoDiverging.addScalarAndColor( -0.5200f, "_aso_div_12");
+        asoDiverging.addScalarAndColor( -0.5600f, "_aso_div_11");
+        asoDiverging.addScalarAndColor( -0.6000f, "_aso_div_10");
+        asoDiverging.addScalarAndColor( -0.6400f, "_aso_div_09");
+        asoDiverging.addScalarAndColor( -0.6800f, "_aso_div_08");
+        asoDiverging.addScalarAndColor( -0.7200f, "_aso_div_07");
+        asoDiverging.addScalarAndColor( -0.7600f, "_aso_div_06");
+        asoDiverging.addScalarAndColor( -0.8000f, "_aso_div_05");
+        asoDiverging.addScalarAndColor( -0.8400f, "_aso_div_04");
+        asoDiverging.addScalarAndColor( -0.8800f, "_aso_div_03");
+        asoDiverging.addScalarAndColor( -0.9200f, "_aso_div_02");
+        asoDiverging.addScalarAndColor( -0.9600f, "_aso_div_01");
+        asoDiverging.addScalarAndColor( -1.0000f, "_aso_div_00");
+
+        addPalette(asoDiverging);
+    }
+
     //----------------------------------------------------------------------
     // ROY-BIG palette
     //
